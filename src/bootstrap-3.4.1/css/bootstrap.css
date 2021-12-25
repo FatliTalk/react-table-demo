@@ -6831,4 +6831,9 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+
+/*
+New Change:
+Reference: https://github.com/pkp/healthSciences/issues/117
+Remove # sourceMappingURL=bootstrap.min.css.map
+*/
