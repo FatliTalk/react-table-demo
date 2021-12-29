@@ -34,8 +34,10 @@ class Table extends Component {
     // I'm going to use the ES6 property shorthand to
     // create a variable that contains `this.props.characterData`.
     const {characterData} = this.props;
-    // ES5: const characterData = this.props.characterData;
+    // const characterData = this.props.characterData; // ES5
     // Reference: https://stackoverflow.com/questions/41058569/
+    // in App.js: `<Table characterData={characters} />`
+    // `this.props.characterData` = {characters}
 
     return (
       <table className="table table-hover">
