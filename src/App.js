@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import Table from './Table';
 
 class App extends Component {
-  render() {
-    const characters = [
+  state = {
+    characters: [
       {
         name: 'Jake',
         job: 'Engineer',
@@ -21,7 +21,30 @@ class App extends Component {
         name: 'Jack',
         job: 'Businessman',
       },
-    ];
+    ],
+  };
+
+  removeCharacter = (index) => {
+    const {characters} = this.state;
+    // const characters = this.state.characters; // ES5
+
+    this.setState({
+      // To update the state, we'll use this.setState(),
+      // a built-in method for manipulating state.
+      // We'll filter the array based on an index that
+      // we pass through, and return the new array.
+      characters: characters.filter((characters, i) => {
+        // `filter` does not mutate but rather creates a new array,
+        // and is a preferred method for modifying arrays in JavaScript.
+        // This particular method is testing an index vs. all the indices
+        // in the array, and returning all but the one that is passed through.
+        return i !== index;
+      }),
+    })
+  }
+
+  render() {
+    const {characters} = this.state;
 
     return (
       <div className="container">
@@ -30,9 +53,11 @@ class App extends Component {
         The data I'm passing through is the characters variable,
         and I'll put curly braces around it as it's a JavaScript expression.
         */}
-        <Table characterData={characters} />
+        {/* We'll pass the `removeCharacter` function
+        through as a prop to Table. */}
+        <Table characterData={characters} removeCharacter={this.removeCharacter} />
       </div>
-    )
+    );
   }
 }
 
