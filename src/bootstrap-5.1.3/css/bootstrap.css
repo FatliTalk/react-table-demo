@@ -11263,4 +11263,8 @@ textarea.form-control-lg {
   }
 }
 
-/*# sourceMappingURL=bootstrap.css.map */
+/*
+Modified:
+Reference: https://github.com/pkp/healthSciences/issues/117
+Remove: \/*# sourceMappingURL=bootstrap.css.map *\/
+*/
