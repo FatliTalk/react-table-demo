@@ -4,24 +4,7 @@ import Table from './Table';
 
 class App extends Component {
   state = {
-    characters: [
-      {
-        name: 'Jake',
-        job: 'Engineer',
-      },
-      {
-        name: 'Xenia',
-        job: 'Teacher',
-      },
-      {
-        name: 'Jenny',
-        job: 'Bank employee',
-      },
-      {
-        name: 'Jack',
-        job: 'Businessman',
-      },
-    ],
+    characters: [],
   };
 
   removeCharacter = (index) => {
