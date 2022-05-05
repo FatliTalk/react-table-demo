@@ -33,28 +33,30 @@ class Form extends Component {
 
     return (
       <form>
-
-        <label htmlFor="name">Name</label>
-        <input
-          className="form-control"
-          type="text"
-          name="name"
-          id="name"
-          value={name}
-          // run the handleChange() method as the onChange of the input
-          onChange={this.handleChange}
-        />
-        <br />
-        <label htmlFor="job">Job</label>
-        <input
-          className="form-control"
-          type="text"
-          name="job"
-          id="job"
-          value={job}
-          // run the handleChange() method as the onChange of the input
-          onChange={this.handleChange}
-        />
+        <div class="mb-3">
+          <label htmlFor="name" className="form-label">Name</label>
+          <input
+            className="form-control"
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            // run the handleChange() method as the onChange of the input
+            onChange={this.handleChange}
+          />
+        </div>
+        <div class="mb-3">
+          <label htmlFor="job" className="form-label">Job</label>
+          <input
+            className="form-control"
+            type="text"
+            name="job"
+            id="job"
+            value={job}
+            // run the handleChange() method as the onChange of the input
+            onChange={this.handleChange}
+          />
+        </div>
       </form>
     );
 
