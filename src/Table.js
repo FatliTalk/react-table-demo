@@ -1,5 +1,3 @@
-import React, {Component} from "react";
-
 // const TableHeader = function() {}
 const TableHeader = () => {
   return (
@@ -29,7 +27,7 @@ const TableBody = (props) => {
         returns the removeCharacter() method,
         otherwise it will try to run automatically. */}
         <td>
-          <button className="btn btn-danger btn-xs" onClick={() => props.removeCharacter(index)}>
+          <button className="btn btn-danger btn-sm" onClick={() => props.removeCharacter(index)}>
             Delete
           </button>
         </td>

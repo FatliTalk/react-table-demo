@@ -27,20 +27,29 @@ class App extends Component {
     })
   }
 
+  // Create a function handleSubmit() to update the state by taking the
+  // existing this.state.characters and adding the new character parameter,
+  // using the ES6 spread operator.
+  handleSubmit = (character) => {
+    this.setState({characters: [...this.state.characters, character]})
+  }
+
   render() {
     const {characters} = this.state;
 
     return (
       <div className="container">
-        {/* We can call the property whatever we want,
-        so I'll go with characterData.
-        The data I'm passing through is the characters variable,
-        and I'll put curly braces around it as it's a JavaScript expression.
+        <h1 className='mt-3'>React Table Demo</h1>
+        <p className='mb-5'>Add a character with a name and a job to the table.</p>
+        {/*
+        We can call the property whatever we want, so I'll go with characterData.
+        The data I'm passing through is the characters variable, and I'll put
+        curly braces around it as it's a JavaScript expression.
+        We'll pass the `removeCharacter` function through as a prop to Table.
         */}
-        {/* We'll pass the `removeCharacter` function
-        through as a prop to Table. */}
         <Table characterData={characters} removeCharacter={this.removeCharacter} />
-        <Form />
+        <br />
+        <Form handleSubmit={this.handleSubmit} />
       </div>
     );
   }

@@ -12,6 +12,7 @@ class Form extends Component {
     job: '',
   }
 
+  // this.state = this.initialState;
   state = this.initialState
 
   // First, we'll make the function that will run every time
@@ -26,6 +27,14 @@ class Form extends Component {
     })
   }
 
+  // Create a method submitForm() to call function App.handleSubmit(),
+  // and pass the Form state through as the character parameter.
+  // Reset the state to the initial state, to clear the form after submit.
+  submitForm = () => {
+    this.props.handleSubmit(this.state)
+    this.setState(this.initialState)
+  }
+
   render() {
     // get our two properties from state, and assign them
     // as the values that correspond to the proper form keys.
@@ -33,7 +42,7 @@ class Form extends Component {
 
     return (
       <form>
-        <div class="mb-3">
+        <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
           <input
             className="form-control"
@@ -45,7 +54,7 @@ class Form extends Component {
             onChange={this.handleChange}
           />
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
           <label htmlFor="job" className="form-label">Job</label>
           <input
             className="form-control"
@@ -57,6 +66,12 @@ class Form extends Component {
             onChange={this.handleChange}
           />
         </div>
+        <input
+          className="btn btn-primary"
+          type="button"
+          value="Submit"
+          onClick={this.submitForm}
+        />
       </form>
     );
 
