@@ -1,3 +1,11 @@
+References:
+- https://www.taniarascia.com/getting-started-with-react/
+- https://create-react-app.dev/docs/getting-started
+- https://create-react-app.dev/docs/deployment/
+- https://reactjs.org/docs/faq-ajax.html
+
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
